@@ -11,6 +11,17 @@ status: experimental!
 
 *(Alternative approach would be to have "type: " in front matter and use /templates/page.js and templates/index.js)*
 
+## Trying it out
+
+1. Clone repo to local drive
+2. `cd` into directory
+3. run `npm install`
+4. run `npm install gatsby-cli`
+5. run `gatsby develop`
+6. Open webbrowser at [http://localhost:8000/](http://localhost:8000/)
+
+## Documentation of coding
+
 In the tutorial Alan Campora uses the "hello world" starter ([https://github.com/gatsbyjs/gatsby-starter-hello-world](https://github.com/gatsbyjs/gatsby-starter-hello-world)) instead of the more complex "gatsby new" command. You can replace "my-project" with your project title:
 
 ```
