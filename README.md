@@ -3,7 +3,7 @@ Based on
 - [https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-hello-world/](https://www.youtube.com/playlist?list=PLIsuo97Nxttysrkraph7n5xcn3EPfJbnQ)
 - Tutorial series: [https://www.youtube.com/playlist?list=PLIsuo97Nxttysrkraph7n5xcn3EPfJbnQ](https://www.youtube.com/playlist?list=PLIsuo97Nxttysrkraph7n5xcn3EPfJbnQ)
 
-# Very Simple Markdown Starter in Gatsby
+# Very Simple Markdown Starter for Gatsby
 
 status: experimental!
 
