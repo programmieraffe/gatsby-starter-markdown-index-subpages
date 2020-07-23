@@ -148,7 +148,7 @@ export default ({data}) =>
   )}
   </Layout>
 ```
- 
+
 ## Working with Markdown (gatsby-transformer-remark for rendering)
 
 `npm i gatsby-transformer-remark`
@@ -405,7 +405,7 @@ query MyQuery {
 }
 ```
 
-Sample output: 
+Sample output:
 
 ```
 {
@@ -442,9 +442,34 @@ Sample output:
 }
 ```
 
-If we use 
+Another way (proposed by [@sroertgen](https://github.com/sroertgen/homepage/blob/master/src/pages/projects.js)) is the following:
 
-`<Link to={node.fields.slug}>{node.frontmatter.title}</Link>` 
+´´´
+export const query = graphql`
+  query {
+  allFile(filter: {sourceInstanceName: {eq: "projects"}, internal: {mediaType: {eq: "text/markdown"}}}, sort: {fields: childMarkdownRemark___frontmatter___date, order: DESC}) {
+    edges {
+      node {
+        id
+        childMarkdownRemark {
+          frontmatter {
+            date(formatString: "DD MMMM, YYYY")
+            title
+          }
+          excerpt
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+  }`
+```
+
+If we use
+
+`<Link to={node.fields.slug}>{node.frontmatter.title}</Link>`
 
 (Import it via `import {graphql, Link} from 'gatsby';`)
 
@@ -583,4 +608,4 @@ export const query = graphql`
 `;
 ```
 
-Navigating to a page with /credits/ or something else should work now. 
+Navigating to a page with /credits/ or something else should work now.
